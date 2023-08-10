@@ -31,7 +31,7 @@ Import the package in your Dart file:
 import 'package:prayers_times/prayers_times.dart';
 ```
 
-### Calculate Prayer Times
+## Calculate Prayer Times
 To calculate and display prayer times for a specific location, follow these steps:
 
 1. Define the geographical coordinates for the location.
@@ -56,7 +56,7 @@ PrayerTimes prayerTimes = PrayerTimes(
 );
 ```
 
-### Prayer Times
+## Prayer Times
 Display prayer times and convenience utilities as needed
 
 ```dart
@@ -74,7 +74,7 @@ print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
 print('Tahajjud End Time:\t${prayerTimes.tahajjudEndTime!}');
 ```
 
-### Convenience Utilities
+## Convenience Utilities
 The `PrayerTimes` instance provides convenience utilities to determine the current and next prayer times, making it easy to display relevant information to users.
 
 ```dart
@@ -85,7 +85,7 @@ print('Current Prayer: $current ${prayerTimes.timeForPrayer(current)}');
 print('Next Prayer: $next ${prayerTimes.timeForPrayer(next)}');
 ```
 
-### Sunnah Times
+## Sunnah Times
 Utilize the `SunnahInsights` class to calculate and display Sunnah times, such as the middle of the night and the last third of the night.
 
 ```dart
@@ -95,11 +95,11 @@ print('Middle of the Night: ${sunnahInsights.middleOfTheNight}');
 print('Last Third of the Night: ${sunnahInsights.lastThirdOfTheNight}');
 ```
 
-### Qibla and Madina Directions
+## Qibla and Madina Directions
 
 The `Qibla` class provides methods to calculate the Qibla direction (direction of the Kaaba in Makkah) and the madina direction (direction of Al-Masjid an-Nabawi) from a given location. These calculations are based on the geographic coordinates (latitude and longitude) of the specified location and the coordinates of Makkah and Al-Masjid an-Nabawi. The calculations use spherical trigonometry to determine the angle between the specified location and the respective directions.
 
-#### Calculate Qibla Direction
+## Calculate Qibla Direction
 
 The `qibla` method calculates the Qibla direction based on the geographic coordinates of the specified location and the coordinates of Makkah (the Holy Kaaba). The result is the clockwise angle from the North direction.
 
@@ -107,7 +107,7 @@ The `qibla` method calculates the Qibla direction based on the geographic coordi
 double qiblaDirection = Qibla.qibla(coordinates);
 ```
 
-#### Calculate Madina Direction
+## Calculate Madina Direction
 
 The `madina` method calculates the madina direction based on the geographic coordinates of the specified location and the coordinates of Al-Masjid an-Nabawi. The result is the clockwise angle from the North direction.
 
@@ -131,9 +131,22 @@ See the [CHANGELOG](https://github.com/MohamedAshraf701/prayers_times/blob/main/
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/MohamedAshraf701/prayers_times/blob/main/LICENSE) file for details.
 
+## Get in touch
+
+If you have any questions, feel free to reach out:
+
+- Email: ashrafchauhan567@gmail.com
+- Githube: [@MohamedAshraf701](https://github.com/MohamedAshraf701)
+
 ## Contributing
 
 Contributions to the `prayers_times` package are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+## Contributors
+
+<a href="https://github.com/MohamedAshraf701/gradientcolor/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=zaid-digital/gradientcolor" />
+</a>
 
 ---
 
