@@ -144,8 +144,8 @@ Contributions to the `prayers_times` package are welcome! Please read the [contr
 
 ## Contributors
 
-<a href="https://github.com/MohamedAshraf701/gradientcolor/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=zaid-digital/gradientcolor" />
+<a href="https://github.com/MohamedAshraf701/prayers_times/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=MohamedAshraf701/prayers_times" />
 </a>
 
 ---
