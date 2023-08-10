@@ -95,12 +95,24 @@ print('Middle of the Night: ${sunnahInsights.middleOfTheNight}');
 print('Last Third of the Night: ${sunnahInsights.lastThirdOfTheNight}');
 ```
 
-### Qibla Direction
-Use the `Qibla` class to calculate and display the Qibla direction in degrees based on the provided geographical coordinates.
+### Qibla and Madina Directions
+
+The `Qibla` class provides methods to calculate the Qibla direction (direction of the Kaaba in Makkah) and the madina direction (direction of Al-Masjid an-Nabawi) from a given location. These calculations are based on the geographic coordinates (latitude and longitude) of the specified location and the coordinates of Makkah and Al-Masjid an-Nabawi. The calculations use spherical trigonometry to determine the angle between the specified location and the respective directions.
+
+#### Calculate Qibla Direction
+
+The `qibla` method calculates the Qibla direction based on the geographic coordinates of the specified location and the coordinates of Makkah (the Holy Kaaba). The result is the clockwise angle from the North direction.
 
 ```dart
-// Qibla Direction
-print('Qibla Direction: ${Qibla.qibla(coordinates)}');
+double qiblaDirection = Qibla.qibla(coordinates);
+```
+
+#### Calculate Madina Direction
+
+The `madina` method calculates the madina direction based on the geographic coordinates of the specified location and the coordinates of Al-Masjid an-Nabawi. The result is the clockwise angle from the North direction.
+
+```dart
+double madinaDirection = Qibla.madina(coordinates);
 ```
 
 ## Customization
@@ -109,15 +121,15 @@ The package offers customization options for various properties and calculations
 
 ## Documentation
 
-For detailed usage instructions and API documentation, please refer to the [documentation](https://your-package-docs-link-here).
+For detailed usage instructions and API documentation, please refer to the [documentation](https://pub.dev/documentation/prayers_times/latest/).
 
 ## Changelog
 
-See the [CHANGELOG](https://github.com/your-username/prayers_times/blob/main/CHANGELOG.md) for a history of changes in the package.
+See the [CHANGELOG](https://github.com/MohamedAshraf701/prayers_times/blob/main/CHANGELOG.md) for a history of changes in the package.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/your-username/prayers_times/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/MohamedAshraf701/prayers_times/blob/main/LICENSE) file for details.
 
 ## Contributing
 

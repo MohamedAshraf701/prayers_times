@@ -1,49 +1,57 @@
 # Dart Example
 
-Example dart app, default values from original Adhanjs.
+Example dart app, default values from original zaid.digital.
 
 ```
-import 'package:prayers_times/prayer_times.dart';
+import 'package:prayers_times/prayers_times.dart';
 
-main() {
-  // Definitions
+void main() {
+  // Define the geographical coordinates for the location
   Coordinates coordinates = Coordinates(21.1959, 72.7933);
-  // Parameters
+
+  // Specify the calculation parameters for prayer times
   PrayerCalculationParameters params = PrayerCalculationMethod.karachi();
   params.madhab = PrayerMadhab.hanafi;
-  PrayerTimes prayerTimes = PrayerTimes(coordinates: coordinates, calculationParameters: params, precision: true, locationName: 'Asia/Kolkata');
 
-  // Prayer times
+  // Create a PrayerTimes instance for the specified location
+  PrayerTimes prayerTimes = PrayerTimes(
+    coordinates: coordinates,
+    calculationParameters: params,
+    precision: true,
+    locationName: 'Asia/Kolkata',
+  );
+
+  // Display prayer times for the current date
   print('\n***** Prayer Times');
-  print('fajrStartTime:\t${prayerTimes.fajrStartTime!}');
-  print('fajrEndTime:\t${prayerTimes.fajrEndTime!}');
-  print('sunriseTime:\t${prayerTimes.sunrise!}');
-  print('dhuhrStartTime:\t${prayerTimes.dhuhrStartTime!}');
-  print('dhuhrEndTime:\t${prayerTimes.dhuhrEndTime!}');
-  print('asrStartTime:\t${prayerTimes.asrStartTime!}');
-  print('asrEndTime:\t${prayerTimes.asrEndTime!}');
-  print('maghribStartTime:\t${prayerTimes.maghribStartTime!}');
-  print('maghribEndTime:\t${prayerTimes.maghribEndTime!}');
-  print('ishaStartTime:\t${prayerTimes.ishaStartTime!}');
-  print('ishaEndTime:\t${prayerTimes.ishaEndTime!}');
+  print('Fajr Start Time:\t${prayerTimes.fajrStartTime!}');
+  print('Fajr End Time:\t${prayerTimes.fajrEndTime!}');
+  print('Sunrise Time:\t${prayerTimes.sunrise!}');
+  print('Dhuhr Start Time:\t${prayerTimes.dhuhrStartTime!}');
+  print('Dhuhr End Time:\t${prayerTimes.dhuhrEndTime!}');
+  print('Asr Start Time:\t${prayerTimes.asrStartTime!}');
+  print('Asr End Time:\t${prayerTimes.asrEndTime!}');
+  print('Maghrib Start Time:\t${prayerTimes.maghribStartTime!}');
+  print('Maghrib End Time:\t${prayerTimes.maghribEndTime!}');
+  print('Isha Start Time:\t${prayerTimes.ishaStartTime!}');
+  print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
+  print('Tahajjud End Time:\t${prayerTimes.tahajjudEndTime!}');
 
-  print('tahajjudEndTime:\t${prayerTimes.tahajjudEndTime!}');
-
-  // Convenience Utilities
-  String current = prayerTimes.currentPrayer(); // date: date
+  // Display convenience utilities for prayer times
+  String current = prayerTimes.currentPrayer();
   String next = prayerTimes.nextPrayer();
   print('\n***** Convenience Utilities');
-  print('current:\t$current\t${prayerTimes.timeForPrayer(current)}');
-  print('next:   \t$next\t${prayerTimes.timeForPrayer(next)}');
-  // Sunnah Times
+  print('Current Prayer:\t$current\t${prayerTimes.timeForPrayer(current)}');
+  print('Next Prayer:\t$next\t${prayerTimes.timeForPrayer(next)}');
+
+  // Calculate and display Sunnah times
   SunnahInsights sunnahInsights = SunnahInsights(prayerTimes);
   print('\n***** Sunnah Times');
-  print('middleOfTheNight:  \t${sunnahInsights.middleOfTheNight}');
-  print('lastThirdOfTheNight:  \t${sunnahInsights.lastThirdOfTheNight}');
+  print('Middle of the Night:\t${sunnahInsights.middleOfTheNight}');
+  print('Last Third of the Night:\t${sunnahInsights.lastThirdOfTheNight}');
 
-  // Qibla Direction
+  // Determine and display Qibla direction
   print('\n***** Qibla Direction');
-  print('qibla:  \t${Qibla.qibla(coordinates)}');
+  double qiblaDirection = Qibla.qibla(coordinates);
+  print('Qibla Direction:\t$qiblaDirection degrees');
 }
-
 ```
