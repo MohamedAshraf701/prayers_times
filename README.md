@@ -3,7 +3,7 @@
 ![Flutter Platform](https://img.shields.io/badge/platform-flutter-yellow)
 [![pub package](https://img.shields.io/pub/v/prayers_times.svg)](https://pub.dev/packages/prayers_times)
 
-`prayers_times` is a Flutter package that provides utilities and calculations for Islamic prayer times, celestial insights, and more.
+Prayers Times is a Flutter package that provides utilities for calculating and displaying Islamic prayer times, as well as related insights like Qibla direction. It's a comprehensive solution for handling prayer timings in your Flutter applications.
 
 ## Features
 
@@ -32,16 +32,22 @@ import 'package:prayers_times/prayers_times.dart';
 ```
 
 ### Calculate Prayer Times
+To calculate and display prayer times for a specific location, follow these steps:
+
+1. Define the geographical coordinates for the location.
+2. Specify the calculation parameters for prayer times, such as the calculation method and madhab.
+3. Create a `PrayerTimes` instance using the provided coordinates and parameters.
+4. Use the provided methods to access various prayer times and convenience utilities.
 
 ```dart
-// Definitions
+// Define the geographical coordinates for the location
 Coordinates coordinates = Coordinates(21.1959, 72.7933);
 
-// Parameters
+// Specify the calculation parameters for prayer times
 PrayerCalculationParameters params = PrayerCalculationMethod.karachi();
 params.madhab = PrayerMadhab.hanafi;
 
-// Calculate prayer times
+// Create a PrayerTimes instance for the specified location
 PrayerTimes prayerTimes = PrayerTimes(
   coordinates: coordinates,
   calculationParameters: params,
@@ -50,24 +56,26 @@ PrayerTimes prayerTimes = PrayerTimes(
 );
 ```
 
-#### Print Prayer Times
+### Prayer Times
+Display prayer times and convenience utilities as needed
 
 ```dart
-print('Fajr Start Time:- ${prayerTimes.fajrStartTime!}');
-print('fajrEndTime:- ${prayerTimes.fajrEndTime!}');
-print('sunriseTime:- ${prayerTimes.sunrise!}');
-print('dhuhrStartTime:- ${prayerTimes.dhuhrStartTime!}');
-print('dhuhrEndTime:- ${prayerTimes.dhuhrEndTime!}');
-print('asrStartTime:- ${prayerTimes.asrStartTime!}');
-print('asrEndTime:- ${prayerTimes.asrEndTime!}');
-print('maghribStartTime:- ${prayerTimes.maghribStartTime!}');
-print('maghribEndTime:- ${prayerTimes.maghribEndTime!}');
-print('ishaStartTime:- ${prayerTimes.ishaStartTime!}');
-print('ishaEndTime:- ${prayerTimes.ishaEndTime!}');
-print('tahajjudEndTime:- ${prayerTimes.tahajjudEndTime!}');
+print('Fajr Start Time:\t${prayerTimes.fajrStartTime!}');
+print('Fajr End Time:\t${prayerTimes.fajrEndTime!}');
+print('Sunrise Time:\t${prayerTimes.sunrise!}');
+print('Dhuhr Start Time:\t${prayerTimes.dhuhrStartTime!}');
+print('Dhuhr End Time:\t${prayerTimes.dhuhrEndTime!}');
+print('Asr Start Time:\t${prayerTimes.asrStartTime!}');
+print('Asr End Time:\t${prayerTimes.asrEndTime!}');
+print('Maghrib Start Time:\t${prayerTimes.maghribStartTime!}');
+print('Maghrib End Time:\t${prayerTimes.maghribEndTime!}');
+print('Isha Start Time:\t${prayerTimes.ishaStartTime!}');
+print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
+print('Tahajjud End Time:\t${prayerTimes.tahajjudEndTime!}');
 ```
 
-#### Convenience Utilities
+### Convenience Utilities
+The `PrayerTimes` instance provides convenience utilities to determine the current and next prayer times, making it easy to display relevant information to users.
 
 ```dart
 // Convenience Utilities
@@ -78,6 +86,7 @@ print('Next Prayer: $next ${prayerTimes.timeForPrayer(next)}');
 ```
 
 ### Sunnah Times
+Utilize the `SunnahInsights` class to calculate and display Sunnah times, such as the middle of the night and the last third of the night.
 
 ```dart
 // Sunnah Times
@@ -87,6 +96,7 @@ print('Last Third of the Night: ${sunnahInsights.lastThirdOfTheNight}');
 ```
 
 ### Qibla Direction
+Use the `Qibla` class to calculate and display the Qibla direction in degrees based on the provided geographical coordinates.
 
 ```dart
 // Qibla Direction
