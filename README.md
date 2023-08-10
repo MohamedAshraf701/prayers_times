@@ -3,6 +3,8 @@
 ![Flutter Platform](https://img.shields.io/badge/platform-flutter-yellow)
 [![pub package](https://img.shields.io/pub/v/prayers_times.svg)](https://pub.dev/packages/prayers_times)
 
+## بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ 
+
 Prayers Times is a Flutter package that provides utilities for calculating and displaying Islamic prayer times, as well as related insights like Qibla direction. It's a comprehensive solution for handling prayer timings in your Flutter applications.
 
 ## Features
@@ -56,8 +58,21 @@ PrayerTimes prayerTimes = PrayerTimes(
 );
 ```
 
+## Prayer Times With Specific Date
+
+To calculate prayer times for a specific date, you can create an instance of the `PrayerTimes` class and provide a custom `DateTime` object using the `dateTime` parameter.
+
+```dart
+PrayerTimes prayerTimes = PrayerTimes(
+  coordinates: Coordinates(latitude, longitude),
+  calculationParameters: CalculationMethod.karachi(),
+  locationName: 'Your Location',
+  dateTime: DateTime(2023, 8, 15), // Specify the desired date
+);
+```
+
 ## Prayer Times
-Display prayer times and convenience utilities as needed
+Display prayer times or Calculate accurate Islamic prayer times based on various calculation methods.
 
 ```dart
 print('Fajr Start Time:\t${prayerTimes.fajrStartTime!}');
@@ -70,6 +85,11 @@ print('Asr End Time:\t${prayerTimes.asrEndTime!}');
 print('Maghrib Start Time:\t${prayerTimes.maghribStartTime!}');
 print('Maghrib End Time:\t${prayerTimes.maghribEndTime!}');
 print('Isha Start Time:\t${prayerTimes.ishaStartTime!}');
+print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
+```
+## Tahajjud & Sehri End Time
+
+```dart
 print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
 print('Tahajjud End Time:\t${prayerTimes.tahajjudEndTime!}');
 ```
@@ -119,17 +139,25 @@ double madinaDirection = Qibla.madina(coordinates);
 
 The package offers customization options for various properties and calculations. Refer to the documentation for detailed information on customization options.
 
+---
+
 ## Documentation
 
 For detailed usage instructions and API documentation, please refer to the [documentation](https://pub.dev/documentation/prayers_times/latest/).
+
+---
 
 ## Changelog
 
 See the [CHANGELOG](https://github.com/MohamedAshraf701/prayers_times/blob/main/CHANGELOG.md) for a history of changes in the package.
 
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/MohamedAshraf701/prayers_times/blob/main/LICENSE) file for details.
+
+---
 
 ## Get in touch
 
@@ -137,6 +165,8 @@ If you have any questions, feel free to reach out:
 
 - Email: ashrafchauhan567@gmail.com
 - Githube: [@MohamedAshraf701](https://github.com/MohamedAshraf701)
+
+---
 
 ## Contributing
 

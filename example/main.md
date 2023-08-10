@@ -35,6 +35,8 @@ void main() {
   print('Isha Start Time:\t${prayerTimes.ishaStartTime!}');
   print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
   print('Tahajjud End Time:\t${prayerTimes.tahajjudEndTime!}');
+  print('Sehri End Time:\t${prayerTimes.sehri!}');
+
 
   // Display convenience utilities for prayer times
   String current = prayerTimes.currentPrayer();

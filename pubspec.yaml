@@ -1,7 +1,7 @@
 name: prayers_times
 description: Seamlessly access precise prayer times with our Flutter package tailored to your location. Enhance your namaz routine effortlessly.
-version: 0.0.1-beta5
-homepage: https:zaid.digital
+version: 0.0.1
+homepage: https://zaid.digital
 repository: https://github.com/MohamedAshraf701/prayers_times.git
 
 environment:
