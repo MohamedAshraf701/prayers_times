@@ -1,15 +1,16 @@
-# prayers_times
+# prayers_times 
+# Namaz_times
 
 ![Flutter Platform](https://img.shields.io/badge/platform-flutter-yellow)
 [![pub package](https://img.shields.io/pub/v/prayers_times.svg)](https://pub.dev/packages/prayers_times)
 
 ## بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ 
 
-Prayers Times is a Flutter package that provides utilities for calculating and displaying Islamic prayer times, as well as related insights like Qibla direction. It's a comprehensive solution for handling prayer timings in your Flutter applications.
+Prayers Times is a Flutter package that provides utilities for calculating and displaying Islamic prayer times (Namaz times), as well as related insights like Qibla direction. It's a comprehensive solution for handling prayer timings in your Flutter applications.
 
 ## Features
 
-- Calculate accurate Islamic prayer times based on various calculation methods.
+- Calculate accurate Islamic prayer times (Namaz times) based on various calculation methods.
 - Determine Qibla direction based on geographical coordinates.
 - Calculate middle of the night and last third of the night times.
 - Conversion utilities for different Islamic time formats.
@@ -72,7 +73,7 @@ PrayerTimes prayerTimes = PrayerTimes(
 ```
 
 ## Prayer Times
-Display prayer times or Calculate accurate Islamic prayer times based on various calculation methods.
+Display prayer times or Calculate accurate Islamic prayer times (Namaz times) based on various calculation methods.
 
 ```dart
 print('Fajr Start Time:\t${prayerTimes.fajrStartTime!}');
@@ -87,6 +88,7 @@ print('Maghrib End Time:\t${prayerTimes.maghribEndTime!}');
 print('Isha Start Time:\t${prayerTimes.ishaStartTime!}');
 print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
 ```
+
 ## Tahajjud & Sehri End Time
 
 ```dart
@@ -164,13 +166,15 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 If you have any questions, feel free to reach out:
 
 - Email: ashrafchauhan567@gmail.com
-- Githube: [@MohamedAshraf701](https://github.com/MohamedAshraf701)
+- GitHub: [@MohamedAshraf701](https://github.com/MohamedAshraf701)
 
 ---
 
 ## Contributing
 
 Contributions to the `prayers_times` package are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+---
 
 ## Contributors
 

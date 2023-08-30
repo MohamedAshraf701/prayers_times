@@ -26,9 +26,13 @@ class Qibla {
     Coordinates makkah = Coordinates(21.4225241, 39.8261818);
 
     // Calculate the terms for the spherical trigonometry equation
-    double term1 = sin(degreesToRadians(makkah.longitude) - degreesToRadians(coordinates.longitude));
-    double term2 = cos(degreesToRadians(coordinates.latitude)) * tan(degreesToRadians(makkah.latitude));
-    double term3 = sin(degreesToRadians(coordinates.latitude)) * cos(degreesToRadians(makkah.longitude) - degreesToRadians(coordinates.longitude));
+    double term1 = sin(degreesToRadians(makkah.longitude) -
+        degreesToRadians(coordinates.longitude));
+    double term2 = cos(degreesToRadians(coordinates.latitude)) *
+        tan(degreesToRadians(makkah.latitude));
+    double term3 = sin(degreesToRadians(coordinates.latitude)) *
+        cos(degreesToRadians(makkah.longitude) -
+            degreesToRadians(coordinates.longitude));
 
     // Calculate the angle using spherical trigonometry (atan2 function)
     double angle = atan2(term1, term2 - term3);
@@ -51,9 +55,13 @@ class Qibla {
     Coordinates madina = Coordinates(24.467035, 39.610947);
 
     // Calculate the terms for the spherical trigonometry equation
-    double term1 = sin(degreesToRadians(madina.longitude) - degreesToRadians(coordinates.longitude));
-    double term2 = cos(degreesToRadians(coordinates.latitude)) * tan(degreesToRadians(madina.latitude));
-    double term3 = sin(degreesToRadians(coordinates.latitude)) * cos(degreesToRadians(madina.longitude) - degreesToRadians(coordinates.longitude));
+    double term1 = sin(degreesToRadians(madina.longitude) -
+        degreesToRadians(coordinates.longitude));
+    double term2 = cos(degreesToRadians(coordinates.latitude)) *
+        tan(degreesToRadians(madina.latitude));
+    double term3 = sin(degreesToRadians(coordinates.latitude)) *
+        cos(degreesToRadians(madina.longitude) -
+            degreesToRadians(coordinates.longitude));
 
     // Calculate the angle using spherical trigonometry (atan2 function)
     double angle = atan2(term1, term2 - term3);
