@@ -1,5 +1,4 @@
-# prayers_times 
-# Namaz_times
+# prayers_times
 
 ![Flutter Platform](https://img.shields.io/badge/platform-flutter-yellow)
 [![pub package](https://img.shields.io/pub/v/prayers_times.svg)](https://pub.dev/packages/prayers_times)
@@ -14,6 +13,8 @@ Prayers Times is a Flutter package that provides utilities for calculating and d
 - Determine Qibla direction based on geographical coordinates.
 - Calculate middle of the night and last third of the night times.
 - Conversion utilities for different Islamic time formats.
+
+# Namaz_times
 
 ## Installation
 

@@ -1,8 +1,9 @@
 name: prayers_times
 description: Seamlessly access precise prayer times with our Flutter package tailored to your location. Enhance your namaz routine effortlessly.
-version: 0.0.2
-homepage: https://zaid.digital
+version: 0.0.3
+homepage: https://github.com/MohamedAshraf701
 repository: https://github.com/MohamedAshraf701/prayers_times.git
+topics : [ time,prayer,namaz,prayertime,namaztime]
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
@@ -18,7 +19,9 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^2.0.0
 
-
+screenshots:
+  - description: The prayers_times package logo.
+    path: screenshot/logo.png
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

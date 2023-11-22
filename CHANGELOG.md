@@ -1,4 +1,4 @@
-# Changelog 0.0.2
+# Changelog 0.0.3
 
 All notable changes to this project will be documented in this file.
 
