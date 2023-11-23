@@ -17,6 +17,15 @@ void main() {
     precision: true,
     locationName: 'Asia/Kolkata',
   );
+  final now = DateTime.now();
+  DateTime tomorrow = DateTime(now.year, now.month, now.day + 1);
+  PrayerTimes prayerTimes1 = PrayerTimes(
+    coordinates: coordinates,
+    calculationParameters: params,
+    dateTime: tomorrow,
+    precision: true,
+    locationName: 'Asia/Kolkata',
+  );
 
   // Display prayer times for the current date
   print('\n***** Prayer Times');
@@ -31,6 +40,7 @@ void main() {
   print('Maghrib End Time:\t${prayerTimes.maghribEndTime!}');
   print('Isha Start Time:\t${prayerTimes.ishaStartTime!}');
   print('Isha End Time:\t${prayerTimes.ishaEndTime!}');
+  print('Next Day Fajr Time:\t${prayerTimes1.fajrStartTime!}');
   print('Tahajjud End Time:\t${prayerTimes.tahajjudEndTime!}');
   print('Sehri End Time:\t${prayerTimes.sehri!}');
 

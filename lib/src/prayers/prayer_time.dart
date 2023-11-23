@@ -268,7 +268,7 @@ class PrayerTimes {
         location);
     ishaEndTime = tz.TZDateTime.from(
         CelestialTimeUtils.roundedMinute(
-            CelestialTimeUtils.dateByAddingMinutes(fajrTime, fajrAdjustment),
+            CelestialTimeUtils.dateByAddingMinutes(fajrafterTime, fajrAdjustment),
             precision: precision),
         location);
     tahajjudEndTime = tz.TZDateTime.from(
