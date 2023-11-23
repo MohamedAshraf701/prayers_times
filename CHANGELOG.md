@@ -1,4 +1,4 @@
-# Changelog 0.0.3
+# Changelog 0.0.5
 
 All notable changes to this project will be documented in this file.
 
@@ -7,13 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [released]
 
-## [0.0.2] - 2023-08-30
-### Added
-- Initial release of the `prayers_times` package.
-- Calculate accurate Islamic prayer times (Namaz times) based on various calculation methods.
-- Determine Qibla direction based on geographical coordinates.
-- Calculate the middle of the night and last third of the night times.
-- Conversion utilities for different Islamic time formats.
+## [0.0.5] - 2023-11-23
+### Fixed
+- Corrected an issue where Isha prayer end time was set based on the Fajr start time
+- Resolved a bug causing overlap of Isha end time with the next day
+
 
 [released]: https://github.com/MohamedAshraf701/prayers_times/
-[0.0.2]: https://github.com/MohamedAshraf701/prayers_times/
+[0.0.5]: https://github.com/MohamedAshraf701/prayers_times/
