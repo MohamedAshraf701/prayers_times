@@ -177,11 +177,8 @@ Contributions to the `prayers_times` package are welcome! Please read the [contr
 
 ---
 
-## Contributors
-
-<a href="https://github.com/MohamedAshraf701/prayers_times/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=MohamedAshraf701/prayers_times" />
-</a>
+# Support
+<p><a href="https://www.buymeacoffee.com/ashraf704"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="ashraf704" /></a></p><br><br>
 
 ---
 

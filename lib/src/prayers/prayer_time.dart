@@ -332,7 +332,7 @@ class PrayerTimes {
     maghribEndTime = tz.TZDateTime.from(
         CelestialTimeUtils.roundedMinute(
             CelestialTimeUtils.dateByAddingMinutes(
-                ishabeforeTime, ishaAdjustment),
+                ishaTime, ishaAdjustment),
             precision: precision),
         location);
   }
