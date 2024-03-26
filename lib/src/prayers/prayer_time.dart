@@ -70,11 +70,11 @@ class PrayerTimes {
       {required this.coordinates,
       required this.calculationParameters,
       bool precision = false,
-      required this.locationName}) {
+      required this.locationName,
+      DateTime? dateTime}) {
     tz.initializeTimeZones();
     final location = tz.getLocation(locationName);
-    DateTime date = tz.TZDateTime.from(DateTime.now(), location);
-
+    DateTime date = tz.TZDateTime.from(dateTime ?? DateTime.now(), location);
     this.date = date;
 
     // Calculate StellarMoment objects for the current date and adjacent days
@@ -369,6 +369,7 @@ class PrayerTimes {
   /// @param date The DateTime for which to determine the current prayer.
   /// @return The current prayer (e.g., Prayer.Fajr, Prayer.Sunrise), or Prayer.IshaBefore if none of the prayers match.
   String currentPrayer() {
+    DateTime date = DateTime.now();
     if (date.isAfter(ishaStartTime!)) {
       return PrayerType.isha;
     } else if (date.isAfter(maghribStartTime!)) {
@@ -390,7 +391,8 @@ class PrayerTimes {
   ///
   /// @param date The DateTime for which to determine the next prayer.
   /// @return The next prayer (e.g., Prayer.FajrAfter, Prayer.Isha), or Prayer.Fajr if none of the prayers match.
-  String nextPrayer() {
+  String nextPrayer({DateTime? date}) {
+    date ??= DateTime.now();
     if (date.isAfter(ishaStartTime!)) {
       return PrayerType.fajrAfter;
     } else if (date.isAfter(maghribStartTime!)) {
