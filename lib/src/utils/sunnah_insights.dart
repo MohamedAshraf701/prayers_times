@@ -22,14 +22,12 @@ class SunnahInsights {
   /// @param prayerTimes The PrayerTimes for which Sunnah times are to be calculated.
   /// @param precision Specifies whether to round the calculated times to the nearest minute (default: true).
   SunnahInsights(PrayerTimes prayerTimes, {bool precision = true}) {
-    DateTime date = prayerTimes.date;
-    DateTime nextDay = CelestialTimeUtils.dateByAddingDays(date, 1);
     PrayerTimes nextDayPrayerTimes = PrayerTimes(
-        coordinates: prayerTimes.coordinates,
-        calculationParameters: prayerTimes.calculationParameters,
-        precision: precision,
-        locationName: prayerTimes.locationName,
-        dateTime: nextDay);
+      coordinates: prayerTimes.coordinates,
+      calculationParameters: prayerTimes.calculationParameters,
+      precision: precision,
+      locationName: prayerTimes.locationName,
+    );
 
     Duration nightDuration = (nextDayPrayerTimes.fajrStartTime!
         .difference(prayerTimes.maghribStartTime!));
